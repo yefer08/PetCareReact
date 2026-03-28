@@ -1,0 +1,6 @@
+rootProject.name = 'PetCareReact'
+
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle")
+applyNativeModulesSettingsGradle(__PATH_TO_NATIVE_MODULES__)
+
+include ':app'
