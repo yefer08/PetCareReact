@@ -1,18 +1,32 @@
 /**
- * Punto de entrada de la aplicación PetCare
+ * Punto de entrada de la aplicacion PetCare
  * Define la navegación y estructura principal
  */
 
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from '@screens/HomeScreen';
+import {SafeAreaView, Text, StyleSheet} from 'react-native';
 
-const App: React.FC = () => {
+
+function App() {
   return (
-    <NavigationContainer>
-      <HomeScreen />
-    </NavigationContainer>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.text}>PetCare React is running</Text>
+    </SafeAreaView>
   );
-};
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+  },
+  text: {
+    fontSize: 22,
+    fontWeight: '600',
+    color: '#000000',
+  },
+});
 
 export default App;
