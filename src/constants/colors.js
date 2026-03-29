@@ -1,12 +1,12 @@
 /**
- * Constantes de la aplicación
+ * Application constants.
  */
 
 export const APP_NAME = 'PetCare';
 export const API_TIMEOUT = 10000;
 export const DEFAULT_LANGUAGE = 'es';
 
-// Colores principales de la aplicación
+// Main color palette
 export const COLORS = {
   primary: '#FF6B6B',
   secondary: '#4ECDC4',
@@ -19,7 +19,7 @@ export const COLORS = {
   success: '#27AE60',
 };
 
-// Tamaños de fuente
+// Font sizes
 export const FONT_SIZES = {
   small: 12,
   medium: 14,

@@ -1,5 +1,5 @@
 /**
- * Pruebas de funciones utilitarias
+ * Utility function tests
  */
 
 import {
@@ -12,7 +12,7 @@ import {
 
 describe('Utility Functions', () => {
   describe('formatDate', () => {
-    it('debería formatear una fecha correctamente', () => {
+    it('formats a date correctly', () => {
       const date = new Date('2024-03-27');
       const result = formatDate(date);
       expect(result).toContain('27');
@@ -21,12 +21,12 @@ describe('Utility Functions', () => {
   });
 
   describe('isValidEmail', () => {
-    it('debería validar un email correcto', () => {
+    it('validates a correct email', () => {
       expect(isValidEmail('test@example.com')).toBe(true);
       expect(isValidEmail('user@domain.co.uk')).toBe(true);
     });
 
-    it('debería rechazar emails inválidos', () => {
+    it('rejects invalid emails', () => {
       expect(isValidEmail('invalid-email')).toBe(false);
       expect(isValidEmail('user@')).toBe(false);
       expect(isValidEmail('@domain.com')).toBe(false);
@@ -34,34 +34,34 @@ describe('Utility Functions', () => {
   });
 
   describe('isValidPhone', () => {
-    it('debería validar un número de teléfono correcto', () => {
+    it('validates a correct phone number', () => {
       expect(isValidPhone('123-456-7890')).toBe(true);
       expect(isValidPhone('+1 (123) 456-7890')).toBe(true);
     });
 
-    it('debería rechazar números inválidos', () => {
+    it('rejects invalid phone numbers', () => {
       expect(isValidPhone('abc')).toBe(false);
       expect(isValidPhone('123')).toBe(false);
     });
   });
 
   describe('truncateText', () => {
-    it('debería dejar el texto sin cambios si es más corto que el máximo', () => {
+    it('keeps text unchanged when below max length', () => {
       expect(truncateText('Hello', 10)).toBe('Hello');
     });
 
-    it('debería truncar el texto si excede el máximo', () => {
+    it('truncates text when it exceeds max length', () => {
       expect(truncateText('Hello World', 5)).toBe('Hello...');
     });
   });
 
   describe('capitalizeFirstLetter', () => {
-    it('debería poner en mayúscula la primera letra', () => {
+    it('capitalizes the first letter', () => {
       expect(capitalizeFirstLetter('hello')).toBe('Hello');
       expect(capitalizeFirstLetter('world')).toBe('World');
     });
 
-    it('debería dejar cadenas vacías como están', () => {
+    it('keeps empty strings unchanged', () => {
       expect(capitalizeFirstLetter('')).toBe('');
     });
   });

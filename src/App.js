@@ -1,16 +1,15 @@
 /**
- * Punto de entrada de la aplicación PetCare
- * Define la navegación y estructura principal
+ * App root entry point.
  */
 
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from '@screens/HomeScreen';
+import MainTabNavigator from './navigation/MainTabNavigator';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <NavigationContainer>
-      <HomeScreen />
+      <MainTabNavigator />
     </NavigationContainer>
   );
 };

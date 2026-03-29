@@ -1,5 +1,5 @@
 /**
- * Pruebas del componente Button
+ * Button component tests
  */
 
 import React from 'react';
@@ -7,7 +7,7 @@ import { render, screen, fireEvent } from '@testing-library/react-native';
 import Button from '../src/components/Button';
 
 describe('Button Component', () => {
-  it('debería renderizar el botón con el título correcto', () => {
+  it('renders button with the correct title', () => {
     const mockPress = jest.fn();
     render(<Button onPress={mockPress} title="Prueba" />);
 
@@ -15,7 +15,7 @@ describe('Button Component', () => {
     expect(button).toBeTruthy();
   });
 
-  it('debería llamar a onPress cuando se presiona', () => {
+  it('calls onPress when pressed', () => {
     const mockPress = jest.fn();
     render(<Button onPress={mockPress} title="Click" />);
 
@@ -25,7 +25,7 @@ describe('Button Component', () => {
     expect(mockPress).toHaveBeenCalled();
   });
 
-  it('no debería llamar a onPress cuando está deshabilitado', () => {
+  it('does not call onPress when disabled', () => {
     const mockPress = jest.fn();
     render(<Button onPress={mockPress} title="Deshabilitado" disabled={true} />);
 
@@ -35,10 +35,10 @@ describe('Button Component', () => {
     expect(mockPress).not.toHaveBeenCalled();
   });
 
-  it('debería renderizar con la variante secondary', () => {
+  it('renders with secondary variant', () => {
     const mockPress = jest.fn();
-    const { container } = render(<Button onPress={mockPress} title="Secondary" variant="secondary" />);
+    const { root } = render(<Button onPress={mockPress} title="Secondary" variant="secondary" />);
 
-    expect(container).toBeTruthy();
+    expect(root).toBeTruthy();
   });
 });

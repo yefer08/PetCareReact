@@ -1,27 +1,13 @@
 /**
- * Componente boton reutilizable
- * Proporciona un botón estilizado consistente en toda la aplicación
+ * Reusable button component.
+ * Provides consistent button styles across the app.
  */
 
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet, ViewStyle, TextStyle } from 'react-native';
-import { COLORS, FONT_SIZES } from '@constants/colors';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { COLORS, FONT_SIZES } from '../constants/colors';
 
-interface ButtonProps {
-  onPress: () => void;
-  title: string;
-  variant?: 'primary' | 'secondary' | 'danger';
-  disabled?: boolean;
-  style?: ViewStyle;
-}
-
-const Button: React.FC<ButtonProps> = ({
-  onPress,
-  title,
-  variant = 'primary',
-  disabled = false,
-  style,
-}) => {
+const Button = ({ onPress, title, variant = 'primary', disabled = false, style }) => {
   const getButtonStyle = () => {
     switch (variant) {
       case 'secondary':
