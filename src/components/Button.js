@@ -19,46 +19,61 @@ const Button = ({ onPress, title, variant = 'primary', disabled = false, style }
     }
   };
 
+  const getTextStyle = () => {
+    switch (variant) {
+      case 'secondary':
+        return styles.secondaryButtonText;
+      default:
+        return styles.buttonText;
+    }
+  };
+
   return (
     <TouchableOpacity
-      style={[getButtonStyle(), disabled && styles.disabled, style]}
+      activeOpacity={0.88}
+      style={[styles.baseButton, getButtonStyle(), disabled && styles.disabled, style]}
       onPress={onPress}
       disabled={disabled}
     >
-      <Text style={styles.buttonText}>{title}</Text>
+      <Text style={getTextStyle()}>{title}</Text>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
+  baseButton: {
+    paddingVertical: 14,
+    paddingHorizontal: 24,
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: COLORS.shadow,
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 3,
+  },
   primaryButton: {
     backgroundColor: COLORS.primary,
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    borderRadius: 8,
-    alignItems: 'center',
   },
   secondaryButton: {
     backgroundColor: COLORS.secondary,
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    borderRadius: 8,
-    alignItems: 'center',
   },
   dangerButton: {
     backgroundColor: COLORS.error,
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    borderRadius: 8,
-    alignItems: 'center',
   },
   disabled: {
-    opacity: 0.5,
+    opacity: 0.55,
   },
   buttonText: {
     color: COLORS.white,
     fontSize: FONT_SIZES.medium,
-    fontWeight: '600',
+    fontWeight: '800',
+  },
+  secondaryButtonText: {
+    color: COLORS.white,
+    fontSize: FONT_SIZES.medium,
+    fontWeight: '800',
   },
 });
 

@@ -8,22 +8,27 @@ export const DEFAULT_LANGUAGE = 'es';
 
 // Main color palette
 export const COLORS = {
-  primary: '#FF6B6B',
+  primary: '#6C63FF',
   secondary: '#4ECDC4',
-  background: '#F7F7F7',
-  text: '#333333',
-  textLight: '#666666',
-  border: '#E0E0E0',
+  accent: '#FF8A65',
+  background: '#F8FAFC',
+  surface: '#FFFFFF',
+  text: '#1F2937',
+  textLight: '#6B7280',
+  border: '#E5E7EB',
   white: '#FFFFFF',
-  error: '#E74C3C',
-  success: '#27AE60',
+  error: '#EF4444',
+  success: '#22C55E',
+  warning: '#F59E0B',
+  inputBackground: '#F1F5F9',
+  shadow: '#0F172A',
 };
 
 // Font sizes
 export const FONT_SIZES = {
   small: 12,
-  medium: 14,
-  large: 16,
-  xLarge: 18,
-  title: 24,
+  medium: 16,
+  large: 20,
+  xLarge: 24,
+  title: 28,
 };
