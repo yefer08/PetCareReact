@@ -1,0 +1,60 @@
+# Dependencias generales
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos específicos de plataforma - iOS
+ios/Pods/
+ios/Podfile.lock
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcworkspace/xcuserdata
+*.xcworkspace/xcshareddata
+DerivedData/
+*.hmap
+*.ipa
+*.xcarchive
+
+# Archivos específicos de plataforma - Android
+android/app/debug/
+android/app/release/
+android/.gradle
+android/local.properties
+android/gradle.properties
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Editor
+.editorconfig
+
+# Archivos temporales
+.env
+.env.local
+.env.*.local
+tmp/
+.cache/
+
+# Logs
+logs/
+*.log
+
+# Archivos generados
+coverage/
+.nyc_output/
+dist/
+build/
