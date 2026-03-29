@@ -8,6 +8,7 @@ import { COLORS } from '../constants/colors';
 
 const Tab = createBottomTabNavigator();
 
+// Simple visual states per tab using native emoji instead of external icon packages.
 const getTabEmoji = (routeName, focused) => {
   if (routeName === 'Mascotas') {
     return focused ? '🐾' : '🐶';
@@ -28,6 +29,7 @@ const MainTabNavigator = () => {
   return (
     <Tab.Navigator
       initialRouteName="Mascotas"
+      // Keep shared tab style in screenOptions to avoid duplicating config per screen.
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarHideOnKeyboard: true,

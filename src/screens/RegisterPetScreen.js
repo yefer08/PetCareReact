@@ -21,6 +21,7 @@ const RegisterPetScreen = () => {
   const [isFormValid, setIsFormValid] = useState(false);
 
   useEffect(() => {
+    // Enable register only when every required field has content.
     const isValid =
       name.trim().length > 0 &&
       species.trim().length > 0 &&
@@ -40,6 +41,7 @@ const RegisterPetScreen = () => {
   };
 
   const clearForm = () => {
+    // Full reset keeps the UX predictable after successful registration.
     setName('');
     setSpecies('');
     setBreed('');

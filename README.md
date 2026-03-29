@@ -4,6 +4,11 @@
 
 - Full name: User
 
+## Authors
+
+- Yefer Yesid Mosquera Ordoba
+- Karina Callejas Uribe
+
 ## Application Name
 
 - PetCare
