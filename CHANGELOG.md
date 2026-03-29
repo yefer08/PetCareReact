@@ -8,6 +8,7 @@ y este proyecto sigue [Semantic Versioning](https://semver.org/es/spec/v2.0.0.ht
 ## [Sin Publicar]
 
 ### Añadido
+
 - Estructura inicial del proyecto React Native
 - Componente Button reutilizable
 - Pantalla HomeScreen con listado de mascotas
@@ -18,17 +19,21 @@ y este proyecto sigue [Semantic Versioning](https://semver.org/es/spec/v2.0.0.ht
 - Documentación del proyecto
 
 ### Cambiado
+
 - Ningún cambio significativo aún
 
 ### Eliminado
+
 - Ningún elemento eliminado
 
 ### Arreglado
+
 - Ningún bug arreglado aún
 
 ## [0.0.1] - 2024-03-27
 
 ### Añadido
+
 - Estructura inicial del proyecto
 
 ---

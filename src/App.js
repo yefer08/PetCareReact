@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD:src/App.tsx
  * Punto de entrada de la aplicacion PetCare
  * Define la navegación y estructura principal
  */
@@ -12,6 +13,20 @@ function App() {
     <SafeAreaView style={styles.container}>
       <Text style={styles.text}>PetCare React is running</Text>
     </SafeAreaView>
+=======
+ * App root entry point.
+ */
+
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import MainTabNavigator from './navigation/MainTabNavigator';
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <MainTabNavigator />
+    </NavigationContainer>
+>>>>>>> develop:src/App.js
   );
 }
 

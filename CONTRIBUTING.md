@@ -5,12 +5,14 @@ Gracias por tu interés en contribuir a PetCareReact. A continuación encontrar�
 ## Cómo empezar
 
 1. **Clonar el repositorio**
+
    ```bash
    git clone https://github.com/yefer08/PetCareReact.git
    cd PetCareReact
    ```
 
 2. **Crear una rama de desarrollo**
+
    ```bash
    git checkout -b develop
    git checkout -b feature/nombre-de-la-feature
@@ -24,11 +26,13 @@ Gracias por tu interés en contribuir a PetCareReact. A continuación encontrar�
 ## Estándares de Código
 
 ### Estilo de Código
+
 - Utilizamos **Prettier** para formateo automático
 - Utilizamos **ESLint** para linting
 - Seguimos los estándares de React Native
 
 ### Comandos Útiles
+
 ```bash
 npm run lint          # Verificar linting
 npm run format        # Formatear código
@@ -40,6 +44,7 @@ npm run ios           # Ejecutar en iOS
 ## Flujo de Trabajo
 
 1. Crear una rama con el prefijo apropiado:
+
    - `feature/` - Para nuevas funcionalidades
    - `fix/` - Para corrección de bugs
    - `docs/` - Para cambios en documentación
@@ -48,6 +53,7 @@ npm run ios           # Ejecutar en iOS
 2. Realizar los cambios y hacer commits regulares con mensajes descriptivos
 
 3. Asegurar que las pruebas pasen:
+
    ```bash
    npm test
    ```
@@ -66,6 +72,7 @@ type(scope): description
 ```
 
 ### Tipos de Commits
+
 - `feat` - Nueva funcionalidad
 - `fix` - Corrección de bug
 - `docs` - Cambios en documentación
@@ -76,6 +83,7 @@ type(scope): description
 - `build` - Cambios en configuración de build
 
 ### Ejemplos
+
 ```
 feat(auth): Implementar login de usuario
 fix(home): Validar lista de mascotas vacía

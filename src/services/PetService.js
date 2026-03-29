@@ -1,18 +1,17 @@
 /**
- * Servicio de API para gestión de mascotas
- * Maneja todas las operaciones relacionadas con mascotas
+ * Pet API service.
+ * Handles all pet-related API operations.
  */
 
-import { API_TIMEOUT } from '@constants/colors';
-import { Pet } from '@types/index';
+import { API_TIMEOUT } from '../constants/colors';
 
 const API_BASE_URL = 'https://api.petcare.com';
 
 class PetService {
   /**
-   * Obtiene la lista de mascotas del usuario
+   * Fetches the current user's pets.
    */
-  async getPets(): Promise<Pet[]> {
+  async getPets() {
     try {
       const response = await fetch(`${API_BASE_URL}/pets`, {
         timeout: API_TIMEOUT,
@@ -24,15 +23,14 @@ class PetService {
 
       return await response.json();
     } catch (error) {
-      console.error('Error in getPets:', error);
       throw error;
     }
   }
 
   /**
-   * Obtiene los detalles de una mascota específica
+   * Fetches details for a specific pet.
    */
-  async getPetById(id: string): Promise<Pet> {
+  async getPetById(id) {
     try {
       const response = await fetch(`${API_BASE_URL}/pets/${id}`, {
         timeout: API_TIMEOUT,
@@ -44,15 +42,14 @@ class PetService {
 
       return await response.json();
     } catch (error) {
-      console.error('Error in getPetById:', error);
       throw error;
     }
   }
 
   /**
-   * Crea una nueva mascota
+   * Creates a new pet.
    */
-  async createPet(pet: Omit<Pet, 'id'>): Promise<Pet> {
+  async createPet(pet) {
     try {
       const response = await fetch(`${API_BASE_URL}/pets`, {
         method: 'POST',
@@ -69,15 +66,14 @@ class PetService {
 
       return await response.json();
     } catch (error) {
-      console.error('Error in createPet:', error);
       throw error;
     }
   }
 
   /**
-   * Actualiza una mascota existente
+   * Updates an existing pet.
    */
-  async updatePet(id: string, pet: Partial<Pet>): Promise<Pet> {
+  async updatePet(id, pet) {
     try {
       const response = await fetch(`${API_BASE_URL}/pets/${id}`, {
         method: 'PUT',
@@ -94,15 +90,14 @@ class PetService {
 
       return await response.json();
     } catch (error) {
-      console.error('Error in updatePet:', error);
       throw error;
     }
   }
 
   /**
-   * Elimina una mascota
+   * Deletes a pet.
    */
-  async deletePet(id: string): Promise<void> {
+  async deletePet(id) {
     try {
       const response = await fetch(`${API_BASE_URL}/pets/${id}`, {
         method: 'DELETE',
@@ -113,7 +108,6 @@ class PetService {
         throw new Error('Error deleting pet');
       }
     } catch (error) {
-      console.error('Error in deletePet:', error);
       throw error;
     }
   }

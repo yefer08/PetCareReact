@@ -7,6 +7,7 @@ apply plugin: "com.facebook.react"
  * By default you don't need to apply any configuration, just uncomment the lines you need.
  */
 react {
+<<<<<<< HEAD
     /* Folders */
     //   The root of your project, i.e. where "package.json" lives. Default is '..'
     // root = file("../")
@@ -68,13 +69,24 @@ def enableProguardInReleaseBuilds = false
  * this variant is about 6MiB larger per architecture than default.
  */
 def jscFlavor = 'org.webkit:android-jsc:+'
+=======
+}
+
+def enableProguardInReleaseBuilds = false
+def jscFlavor = 'org.webkit:android-jsc:+'
+def hermesEnabled = project.findProperty("hermesEnabled") ?: "true"
+>>>>>>> develop
 
 android {
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
+<<<<<<< HEAD
     namespace "com.petcareclean"
+=======
+    namespace "com.petcarereact"
+>>>>>>> develop
     defaultConfig {
         applicationId "com.petcareclean"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -105,7 +117,10 @@ android {
 }
 
 dependencies {
+<<<<<<< HEAD
     // The version of react-native is set by the React Native Gradle Plugin
+=======
+>>>>>>> develop
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:flipper-integration")
 
@@ -116,4 +131,8 @@ dependencies {
     }
 }
 
+<<<<<<< HEAD
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+=======
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+>>>>>>> develop

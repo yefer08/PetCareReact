@@ -1,5 +1,5 @@
 /**
- * Punto de entrada de la aplicación
+ * App registration entry point.
  */
 
 import {AppRegistry} from 'react-native';

@@ -1,21 +1,42 @@
 # PetCareReact
 
-Este es un proyecto de React Native para la aplicación PetCare.
+## Student Information
 
-## Estructura del Proyecto
+- Full name: User
 
-- `android/`: Archivos específicos de Android
-- `ios/`: Archivos específicos de iOS
-- `src/`: Código fuente de la aplicación
-- `assets/`: Recursos estáticos (imágenes, fuentes, etc.)
-- `__tests__/`: Archivos de pruebas
+## Application Name
 
-## Instalación
+- PetCare
 
-1. Instala las dependencias: `npm install`
-2. Para Android: `npx react-native run-android`
-3. Para iOS: `npx react-native run-ios`
+## Project Description
 
-## Contribución
+PetCare is a React Native CLI mobile app built for practicing navigation and hooks.
+It includes pet listing and details, a controlled registration form, and auto-rotating care tips.
+The project demonstrates Tab + Stack navigation, parameter passing, and state/effect patterns.
 
-Por favor, lee el CONTRIBUTING.md para detalles sobre el proceso de contribución.
+## Project Structure
+
+- `android/`: Android-specific files
+- `ios/`: iOS-specific files
+- `src/`: JavaScript source code
+- `assets/`: Static assets
+- `__tests__/`: Test files
+
+## Installation and Run
+
+1. Install dependencies: `npm install`
+2. Start Metro: `npm start`
+3. Run Android: `npm run android`
+4. Run iOS: `npm run ios`
+
+## Technologies
+
+- React Native CLI 0.73.1
+- React 18.2.0
+- React Navigation (Bottom Tabs + Native Stack)
+- JavaScript (ES6+)
+- Jest
+
+## Contributing
+
+Please read CONTRIBUTING.md for contribution guidelines.
