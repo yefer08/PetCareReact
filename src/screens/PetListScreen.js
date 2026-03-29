@@ -38,13 +38,22 @@ const PetListScreen = ({ navigation }) => {
       <TouchableOpacity
         style={styles.card}
         onPress={() => navigation.navigate('PetDetail', { pet: item })}
-        activeOpacity={0.85}
+        activeOpacity={0.9}
       >
-        <Text style={styles.cardTitle}>
-          {getSpeciesEmoji(item.species)} {item.name}
-        </Text>
-        <Text style={styles.cardSubtitle}>Especie: {item.species}</Text>
-        <Text style={styles.cardSubtitle}>Raza: {item.breed}</Text>
+        <View style={styles.cardHeader}>
+          <Text style={styles.petEmoji}>{getSpeciesEmoji(item.species)}</Text>
+
+          <View style={styles.cardHeaderText}>
+            <Text style={styles.cardTitle}>{item.name}</Text>
+            <Text style={styles.cardSubtitle}>{item.breed}</Text>
+          </View>
+
+          <View style={styles.speciesBadge}>
+            <Text style={styles.speciesBadgeText}>{item.species}</Text>
+          </View>
+        </View>
+
+        <Text style={styles.cardInfo}>Toca para ver el detalle completo</Text>
       </TouchableOpacity>
     );
   };
@@ -52,9 +61,18 @@ const PetListScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.heading}>Mascotas registradas</Text>
+        <Text style={styles.heading}>🐾 Mascotas registradas</Text>
+        <Text style={styles.description}>Consulta la información de cada mascota fácilmente.</Text>
+
         {isLoading ? <Text style={styles.infoText}>Cargando datos de ejemplo...</Text> : null}
-        <FlatList data={pets} keyExtractor={(item) => item.id} renderItem={renderPetCard} />
+
+        <FlatList
+          data={pets}
+          keyExtractor={(item) => item.id}
+          renderItem={renderPetCard}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.listContent}
+        />
       </View>
     </SafeAreaView>
   );

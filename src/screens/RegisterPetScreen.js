@@ -54,38 +54,53 @@ const RegisterPetScreen = () => {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
         <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
-          <Text style={styles.heading}>Registrar mascota</Text>
+          <Text style={styles.heading}>🩺 Registrar mascota</Text>
+          <Text style={styles.description}>Completa el formulario con la información básica.</Text>
 
           <View style={styles.formCard}>
+            <Text style={styles.label}>Nombre</Text>
             <TextInput
               value={name}
               onChangeText={setName}
-              placeholder="Nombre"
+              placeholder="Ej. Max"
+              placeholderTextColor="#94A3B8"
               style={styles.input}
             />
+
+            <Text style={styles.label}>Especie</Text>
             <TextInput
               value={species}
               onChangeText={setSpecies}
-              placeholder="Especie"
+              placeholder="Ej. Perro"
+              placeholderTextColor="#94A3B8"
               style={styles.input}
             />
+
+            <Text style={styles.label}>Raza</Text>
             <TextInput
               value={breed}
               onChangeText={setBreed}
-              placeholder="Raza"
+              placeholder="Ej. Golden Retriever"
+              placeholderTextColor="#94A3B8"
               style={styles.input}
             />
+
+            <Text style={styles.label}>Edad</Text>
             <TextInput
               value={age}
               onChangeText={setAge}
-              placeholder="Edad"
+              placeholder="Ej. 3"
+              placeholderTextColor="#94A3B8"
               keyboardType="number-pad"
               style={styles.input}
             />
+
+            <Text style={styles.label}>Peso</Text>
             <TextInput
               value={weight}
               onChangeText={setWeight}
-              placeholder="Peso"
+              placeholder="Ej. 30"
+              placeholderTextColor="#94A3B8"
               keyboardType="decimal-pad"
               style={styles.input}
             />

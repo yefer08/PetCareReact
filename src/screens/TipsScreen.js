@@ -31,13 +31,15 @@ const TipsScreen = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.heading}>Consejos de cuidado</Text>
+        <Text style={styles.description}>Pequeñas acciones hacen una gran diferencia.</Text>
 
         <View style={styles.card}>
+          <Text style={styles.tipEmoji}>🐾</Text>
           <Text style={styles.tipText}>{tips[currentIndex]}</Text>
           <Text style={styles.counter}>{infoMessage}</Text>
         </View>
 
-        <Button title="Siguiente consejo" onPress={goToNextTip} />
+        <Button title="Siguiente consejo" onPress={goToNextTip} style={styles.actionButton} />
       </View>
     </SafeAreaView>
   );

@@ -10,6 +10,7 @@ react {
 
 def enableProguardInReleaseBuilds = false
 def jscFlavor = 'org.webkit:android-jsc:+'
+def hermesEnabled = project.findProperty("hermesEnabled") ?: "true"
 
 android {
     ndkVersion rootProject.ext.ndkVersion
