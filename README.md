@@ -2,7 +2,7 @@
 
 ## Student Information
 
-- Full name: User
+- Full name: Yesid Cordoba and Karina callejas.
 
 ## Application Name
 
